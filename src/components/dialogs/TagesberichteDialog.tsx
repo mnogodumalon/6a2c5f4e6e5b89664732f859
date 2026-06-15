@@ -375,7 +375,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
           value={lookupKey(fields.wetterbedingungen) ?? ''}
           onValueChange={v => setFields(f => ({ ...f, wetterbedingungen: v === 'none' ? undefined : v as any }))}
         >
-          <SelectTrigger id="wetterbedingungen"><SelectValue placeholder="" /></SelectTrigger>
+          <SelectTrigger id="wetterbedingungen" className="max-sm:h-11"><SelectValue placeholder="" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="none">—</SelectItem>
             <SelectItem value="sonnig">Sonnig</SelectItem>
@@ -549,7 +549,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
               onClick={() => setAiOpen(o => !o)}
               aria-expanded={aiOpen}
               aria-controls="ai-fill-panel"
-              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all mr-7 shadow-sm ${
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 max-sm:py-2 max-sm:px-4 text-xs font-semibold transition-all mr-7 shadow-sm ${
                 aiOpen
                   ? 'bg-primary text-primary-foreground ring-2 ring-primary/30'
                   : 'bg-primary/10 text-primary border border-primary/30 hover:bg-primary/15 hover:border-primary/50'
@@ -731,7 +731,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0 max-sm:[&_input]:h-11">
           <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-4 space-y-4 min-w-0">
             {(() => {
               const renderField = (k: string) => {
@@ -830,9 +830,10 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
             </div>
           )}
           <DialogFooter className="sticky bottom-0 border-t bg-background/95 backdrop-blur px-6 py-3 gap-2">
-            <Button type="button" variant="outline" onClick={onClose}>Abbrechen</Button>
+            <Button type="button" variant="outline" onClick={onClose} className="max-sm:h-12 max-sm:text-base">Abbrechen</Button>
             <Button
               type="submit"
+              className="max-sm:h-12 max-sm:text-base"
               disabled={saving || !isDirty}
             >
               {saving ? 'Speichern...' : defaultValues ? 'Speichern' : 'Erstellen'}

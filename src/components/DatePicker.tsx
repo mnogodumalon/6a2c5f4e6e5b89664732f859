@@ -95,7 +95,7 @@ export function DatePicker({
     // Result: the date field reads as a plain value box, identical to the text
     // inputs around it. Tapping still opens the native picker on touch devices.
     return (
-      <div className={`relative flex h-9 w-full min-w-0 max-w-full items-center overflow-hidden rounded-md border bg-transparent dark:bg-input/30 shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px] ${invalid ? 'border-destructive' : 'border-input'}`}>
+      <div className={`relative flex h-9 max-sm:h-11 w-full min-w-0 max-w-full items-center overflow-hidden rounded-md border bg-transparent dark:bg-input/30 shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px] ${invalid ? 'border-destructive' : 'border-input'}`}>
         <input
           id={id}
           type={mode === 'datetime' ? 'datetime-local' : 'date'}
@@ -161,7 +161,7 @@ export function DatePicker({
           type="button"
           aria-invalid={invalid || undefined}
           style={{ minWidth: 0 }}
-          className={`flex h-9 w-full min-w-0 max-w-full items-center gap-2 rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
+          className={`flex h-9 max-sm:h-11 w-full min-w-0 max-w-full items-center gap-2 rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
             ${invalid ? 'border-destructive' : 'border-input'}`}
         >
           {mode === 'datetime'

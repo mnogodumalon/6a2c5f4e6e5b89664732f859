@@ -141,7 +141,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.hausanschluss_typ) === 'strom'}
                 onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'strom' ? undefined : 'strom') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.hausanschluss_typ) === 'strom'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -154,7 +154,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.hausanschluss_typ) === 'gas'}
                 onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'gas' ? undefined : 'gas') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.hausanschluss_typ) === 'gas'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -167,7 +167,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.hausanschluss_typ) === 'wasser'}
                 onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'wasser' ? undefined : 'wasser') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.hausanschluss_typ) === 'wasser'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -180,7 +180,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.hausanschluss_typ) === 'telekommunikation'}
                 onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'telekommunikation' ? undefined : 'telekommunikation') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.hausanschluss_typ) === 'telekommunikation'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -193,7 +193,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.hausanschluss_typ) === 'fernwaerme'}
                 onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'fernwaerme' ? undefined : 'fernwaerme') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.hausanschluss_typ) === 'fernwaerme'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -211,7 +211,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.spannungsebene) === 'niederspannung'}
                 onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'niederspannung' ? undefined : 'niederspannung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.spannungsebene) === 'niederspannung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -224,7 +224,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.spannungsebene) === 'mittelspannung'}
                 onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'mittelspannung' ? undefined : 'mittelspannung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.spannungsebene) === 'mittelspannung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -237,7 +237,7 @@ export default function PublicFormLeitungsauskunft() {
                 role="radio"
                 aria-checked={lookupKey(fields.spannungsebene) === 'hochspannung'}
                 onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'hochspannung' ? undefined : 'hochspannung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.spannungsebene) === 'hochspannung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'

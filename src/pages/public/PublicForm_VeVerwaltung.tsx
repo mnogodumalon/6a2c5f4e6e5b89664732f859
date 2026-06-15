@@ -171,7 +171,7 @@ export default function PublicFormVeVerwaltung() {
                 role="radio"
                 aria-checked={lookupKey(fields.ve_status) === 'beantragt'}
                 onClick={() => setFields(f => ({ ...f, ve_status: (lookupKey(f.ve_status) === 'beantragt' ? undefined : 'beantragt') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.ve_status) === 'beantragt'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -184,7 +184,7 @@ export default function PublicFormVeVerwaltung() {
                 role="radio"
                 aria-checked={lookupKey(fields.ve_status) === 'genehmigt'}
                 onClick={() => setFields(f => ({ ...f, ve_status: (lookupKey(f.ve_status) === 'genehmigt' ? undefined : 'genehmigt') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.ve_status) === 'genehmigt'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -197,7 +197,7 @@ export default function PublicFormVeVerwaltung() {
                 role="radio"
                 aria-checked={lookupKey(fields.ve_status) === 'abgelaufen'}
                 onClick={() => setFields(f => ({ ...f, ve_status: (lookupKey(f.ve_status) === 'abgelaufen' ? undefined : 'abgelaufen') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.ve_status) === 'abgelaufen'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -210,7 +210,7 @@ export default function PublicFormVeVerwaltung() {
                 role="radio"
                 aria-checked={lookupKey(fields.ve_status) === 'widerrufen'}
                 onClick={() => setFields(f => ({ ...f, ve_status: (lookupKey(f.ve_status) === 'widerrufen' ? undefined : 'widerrufen') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.ve_status) === 'widerrufen'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'

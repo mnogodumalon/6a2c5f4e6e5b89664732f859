@@ -186,7 +186,7 @@ export default function PublicFormBaustellen() {
                 role="radio"
                 aria-checked={lookupKey(fields.status) === 'geplant'}
                 onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'geplant' ? undefined : 'geplant') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.status) === 'geplant'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -199,7 +199,7 @@ export default function PublicFormBaustellen() {
                 role="radio"
                 aria-checked={lookupKey(fields.status) === 'in_arbeit'}
                 onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'in_arbeit' ? undefined : 'in_arbeit') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.status) === 'in_arbeit'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -212,7 +212,7 @@ export default function PublicFormBaustellen() {
                 role="radio"
                 aria-checked={lookupKey(fields.status) === 'abgeschlossen'}
                 onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'abgeschlossen' ? undefined : 'abgeschlossen') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.status) === 'abgeschlossen'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -281,7 +281,7 @@ export default function PublicFormBaustellen() {
           <div className="space-y-2">
             <Label htmlFor="standort">GPS-Standort</Label>
             <div className="space-y-3">
-              <Button type="button" variant="outline" className="w-full" disabled={locating} onClick={() => geoLocate("standort")}>
+              <Button type="button" variant="outline" className="w-full max-sm:h-11" disabled={locating} onClick={() => geoLocate("standort")}>
                 {locating ? <IconLoader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <IconCrosshair className="h-4 w-4 mr-1.5" />}
                 Aktuellen Standort verwenden
               </Button>
@@ -300,7 +300,7 @@ export default function PublicFormBaustellen() {
                   onChange={(lat, lng) => handleMapMove("standort", lat, lng)}
                 />
               )}
-              <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors" onClick={() => setShowCoords(v => !v)}>
+              <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 py-1 max-sm:py-2 transition-colors" onClick={() => setShowCoords(v => !v)}>
                 {showCoords ? 'Koordinaten verbergen' : 'Koordinaten anzeigen'}
                 <IconChevronDown className={`h-3 w-3 transition-transform ${showCoords ? "rotate-180" : ""}`} />
               </button>

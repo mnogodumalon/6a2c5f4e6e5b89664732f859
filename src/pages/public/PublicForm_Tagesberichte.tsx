@@ -163,7 +163,7 @@ export default function PublicFormTagesberichte() {
               value={lookupKey(fields.wetterbedingungen) ?? ''}
               onValueChange={v => setFields(f => ({ ...f, wetterbedingungen: v === 'none' ? undefined : v as any }))}
             >
-              <SelectTrigger id="wetterbedingungen"><SelectValue placeholder="" /></SelectTrigger>
+              <SelectTrigger id="wetterbedingungen" className="max-sm:h-11"><SelectValue placeholder="" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="none">—</SelectItem>
                 <SelectItem value="sonnig">Sonnig</SelectItem>

@@ -428,7 +428,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
             role="radio"
             aria-checked={lookupKey(fields.kontaktart) === 'information'}
             onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'information' ? undefined : 'information') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.kontaktart) === 'information'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -441,7 +441,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
             role="radio"
             aria-checked={lookupKey(fields.kontaktart) === 'beschwerde'}
             onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'beschwerde' ? undefined : 'beschwerde') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.kontaktart) === 'beschwerde'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -454,7 +454,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
             role="radio"
             aria-checked={lookupKey(fields.kontaktart) === 'rueckfrage'}
             onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'rueckfrage' ? undefined : 'rueckfrage') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.kontaktart) === 'rueckfrage'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -467,7 +467,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
             role="radio"
             aria-checked={lookupKey(fields.kontaktart) === 'sonstiges'}
             onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'sonstiges' ? undefined : 'sonstiges') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.kontaktart) === 'sonstiges'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -599,7 +599,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
               onClick={() => setAiOpen(o => !o)}
               aria-expanded={aiOpen}
               aria-controls="ai-fill-panel"
-              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all mr-7 shadow-sm ${
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 max-sm:py-2 max-sm:px-4 text-xs font-semibold transition-all mr-7 shadow-sm ${
                 aiOpen
                   ? 'bg-primary text-primary-foreground ring-2 ring-primary/30'
                   : 'bg-primary/10 text-primary border border-primary/30 hover:bg-primary/15 hover:border-primary/50'
@@ -781,7 +781,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0 max-sm:[&_input]:h-11">
           <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-4 space-y-4 min-w-0">
             {(() => {
               const renderField = (k: string) => {
@@ -880,9 +880,10 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
             </div>
           )}
           <DialogFooter className="sticky bottom-0 border-t bg-background/95 backdrop-blur px-6 py-3 gap-2">
-            <Button type="button" variant="outline" onClick={onClose}>Abbrechen</Button>
+            <Button type="button" variant="outline" onClick={onClose} className="max-sm:h-12 max-sm:text-base">Abbrechen</Button>
             <Button
               type="submit"
+              className="max-sm:h-12 max-sm:text-base"
               disabled={saving || !isDirty}
             >
               {saving ? 'Speichern...' : defaultValues ? 'Speichern' : 'Erstellen'}

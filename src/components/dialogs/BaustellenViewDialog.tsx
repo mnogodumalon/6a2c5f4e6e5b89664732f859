@@ -93,7 +93,7 @@ export function BaustellenViewDialog({ open, onClose, record, onEdit }: Baustell
                 readOnly
               />
             )}
-            <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors" onClick={() => setShowCoords(v => !v)}>
+            <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 py-1 max-sm:py-2 transition-colors" onClick={() => setShowCoords(v => !v)}>
               {showCoords ? 'Koordinaten verbergen' : 'Koordinaten anzeigen'}
               <IconChevronDown className={`h-3 w-3 transition-transform ${showCoords ? "rotate-180" : ""}`} />
             </button>

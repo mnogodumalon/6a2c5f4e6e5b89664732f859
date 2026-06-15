@@ -205,7 +205,7 @@ export default function PublicFormKommunikation() {
                 role="radio"
                 aria-checked={lookupKey(fields.kontaktart) === 'information'}
                 onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'information' ? undefined : 'information') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.kontaktart) === 'information'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -218,7 +218,7 @@ export default function PublicFormKommunikation() {
                 role="radio"
                 aria-checked={lookupKey(fields.kontaktart) === 'beschwerde'}
                 onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'beschwerde' ? undefined : 'beschwerde') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.kontaktart) === 'beschwerde'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -231,7 +231,7 @@ export default function PublicFormKommunikation() {
                 role="radio"
                 aria-checked={lookupKey(fields.kontaktart) === 'rueckfrage'}
                 onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'rueckfrage' ? undefined : 'rueckfrage') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.kontaktart) === 'rueckfrage'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -244,7 +244,7 @@ export default function PublicFormKommunikation() {
                 role="radio"
                 aria-checked={lookupKey(fields.kontaktart) === 'sonstiges'}
                 onClick={() => setFields(f => ({ ...f, kontaktart: (lookupKey(f.kontaktart) === 'sonstiges' ? undefined : 'sonstiges') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.kontaktart) === 'sonstiges'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'

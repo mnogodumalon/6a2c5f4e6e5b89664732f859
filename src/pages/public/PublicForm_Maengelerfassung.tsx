@@ -132,7 +132,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangeltyp) === 'falsche_absperrung'}
                 onClick={() => setFields(f => ({ ...f, mangeltyp: (lookupKey(f.mangeltyp) === 'falsche_absperrung' ? undefined : 'falsche_absperrung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangeltyp) === 'falsche_absperrung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -145,7 +145,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangeltyp) === 'nacharbeit'}
                 onClick={() => setFields(f => ({ ...f, mangeltyp: (lookupKey(f.mangeltyp) === 'nacharbeit' ? undefined : 'nacharbeit') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangeltyp) === 'nacharbeit'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -158,7 +158,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangeltyp) === 'sicherheitsmangel'}
                 onClick={() => setFields(f => ({ ...f, mangeltyp: (lookupKey(f.mangeltyp) === 'sicherheitsmangel' ? undefined : 'sicherheitsmangel') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangeltyp) === 'sicherheitsmangel'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -171,7 +171,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangeltyp) === 'qualitaetsmangel'}
                 onClick={() => setFields(f => ({ ...f, mangeltyp: (lookupKey(f.mangeltyp) === 'qualitaetsmangel' ? undefined : 'qualitaetsmangel') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangeltyp) === 'qualitaetsmangel'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -184,7 +184,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangeltyp) === 'sonstiges'}
                 onClick={() => setFields(f => ({ ...f, mangeltyp: (lookupKey(f.mangeltyp) === 'sonstiges' ? undefined : 'sonstiges') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangeltyp) === 'sonstiges'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -212,7 +212,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.prioritaet) === 'niedrig'}
                 onClick={() => setFields(f => ({ ...f, prioritaet: (lookupKey(f.prioritaet) === 'niedrig' ? undefined : 'niedrig') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.prioritaet) === 'niedrig'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -225,7 +225,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.prioritaet) === 'mittel'}
                 onClick={() => setFields(f => ({ ...f, prioritaet: (lookupKey(f.prioritaet) === 'mittel' ? undefined : 'mittel') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.prioritaet) === 'mittel'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -238,7 +238,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.prioritaet) === 'hoch'}
                 onClick={() => setFields(f => ({ ...f, prioritaet: (lookupKey(f.prioritaet) === 'hoch' ? undefined : 'hoch') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.prioritaet) === 'hoch'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -251,7 +251,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.prioritaet) === 'kritisch'}
                 onClick={() => setFields(f => ({ ...f, prioritaet: (lookupKey(f.prioritaet) === 'kritisch' ? undefined : 'kritisch') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.prioritaet) === 'kritisch'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -279,7 +279,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangel_status) === 'offen'}
                 onClick={() => setFields(f => ({ ...f, mangel_status: (lookupKey(f.mangel_status) === 'offen' ? undefined : 'offen') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangel_status) === 'offen'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -292,7 +292,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangel_status) === 'in_bearbeitung'}
                 onClick={() => setFields(f => ({ ...f, mangel_status: (lookupKey(f.mangel_status) === 'in_bearbeitung' ? undefined : 'in_bearbeitung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangel_status) === 'in_bearbeitung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -305,7 +305,7 @@ export default function PublicFormMaengelerfassung() {
                 role="radio"
                 aria-checked={lookupKey(fields.mangel_status) === 'behoben'}
                 onClick={() => setFields(f => ({ ...f, mangel_status: (lookupKey(f.mangel_status) === 'behoben' ? undefined : 'behoben') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.mangel_status) === 'behoben'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'

@@ -362,7 +362,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.hausanschluss_typ) === 'strom'}
             onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'strom' ? undefined : 'strom') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.hausanschluss_typ) === 'strom'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -375,7 +375,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.hausanschluss_typ) === 'gas'}
             onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'gas' ? undefined : 'gas') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.hausanschluss_typ) === 'gas'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -388,7 +388,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.hausanschluss_typ) === 'wasser'}
             onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'wasser' ? undefined : 'wasser') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.hausanschluss_typ) === 'wasser'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -401,7 +401,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.hausanschluss_typ) === 'telekommunikation'}
             onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'telekommunikation' ? undefined : 'telekommunikation') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.hausanschluss_typ) === 'telekommunikation'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -414,7 +414,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.hausanschluss_typ) === 'fernwaerme'}
             onClick={() => setFields(f => ({ ...f, hausanschluss_typ: (lookupKey(f.hausanschluss_typ) === 'fernwaerme' ? undefined : 'fernwaerme') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.hausanschluss_typ) === 'fernwaerme'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -434,7 +434,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.spannungsebene) === 'niederspannung'}
             onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'niederspannung' ? undefined : 'niederspannung') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.spannungsebene) === 'niederspannung'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -447,7 +447,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.spannungsebene) === 'mittelspannung'}
             onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'mittelspannung' ? undefined : 'mittelspannung') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.spannungsebene) === 'mittelspannung'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -460,7 +460,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             role="radio"
             aria-checked={lookupKey(fields.spannungsebene) === 'hochspannung'}
             onClick={() => setFields(f => ({ ...f, spannungsebene: (lookupKey(f.spannungsebene) === 'hochspannung' ? undefined : 'hochspannung') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.spannungsebene) === 'hochspannung'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -661,7 +661,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
               onClick={() => setAiOpen(o => !o)}
               aria-expanded={aiOpen}
               aria-controls="ai-fill-panel"
-              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all mr-7 shadow-sm ${
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 max-sm:py-2 max-sm:px-4 text-xs font-semibold transition-all mr-7 shadow-sm ${
                 aiOpen
                   ? 'bg-primary text-primary-foreground ring-2 ring-primary/30'
                   : 'bg-primary/10 text-primary border border-primary/30 hover:bg-primary/15 hover:border-primary/50'
@@ -843,7 +843,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0 max-sm:[&_input]:h-11">
           <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-4 space-y-4 min-w-0">
             {(() => {
               const renderField = (k: string) => {
@@ -942,9 +942,10 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
             </div>
           )}
           <DialogFooter className="sticky bottom-0 border-t bg-background/95 backdrop-blur px-6 py-3 gap-2">
-            <Button type="button" variant="outline" onClick={onClose}>Abbrechen</Button>
+            <Button type="button" variant="outline" onClick={onClose} className="max-sm:h-12 max-sm:text-base">Abbrechen</Button>
             <Button
               type="submit"
+              className="max-sm:h-12 max-sm:text-base"
               disabled={saving || !isDirty}
             >
               {saving ? 'Speichern...' : defaultValues ? 'Speichern' : 'Erstellen'}

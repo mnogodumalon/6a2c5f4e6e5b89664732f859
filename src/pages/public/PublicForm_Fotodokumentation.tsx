@@ -167,7 +167,7 @@ export default function PublicFormFotodokumentation() {
                 role="radio"
                 aria-checked={lookupKey(fields.fotokategorie) === 'vor_beginn'}
                 onClick={() => setFields(f => ({ ...f, fotokategorie: (lookupKey(f.fotokategorie) === 'vor_beginn' ? undefined : 'vor_beginn') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.fotokategorie) === 'vor_beginn'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -180,7 +180,7 @@ export default function PublicFormFotodokumentation() {
                 role="radio"
                 aria-checked={lookupKey(fields.fotokategorie) === 'waehrend_arbeiten'}
                 onClick={() => setFields(f => ({ ...f, fotokategorie: (lookupKey(f.fotokategorie) === 'waehrend_arbeiten' ? undefined : 'waehrend_arbeiten') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.fotokategorie) === 'waehrend_arbeiten'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -193,7 +193,7 @@ export default function PublicFormFotodokumentation() {
                 role="radio"
                 aria-checked={lookupKey(fields.fotokategorie) === 'nach_fertigstellung'}
                 onClick={() => setFields(f => ({ ...f, fotokategorie: (lookupKey(f.fotokategorie) === 'nach_fertigstellung' ? undefined : 'nach_fertigstellung') as any }))}
-                className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   lookupKey(fields.fotokategorie) === 'nach_fertigstellung'
                     ? 'bg-foreground text-background border-foreground'
                     : 'bg-background text-foreground border-input hover:bg-accent'
@@ -216,7 +216,7 @@ export default function PublicFormFotodokumentation() {
           <div className="space-y-2">
             <Label htmlFor="gps_koordinaten">GPS-Koordinaten</Label>
             <div className="space-y-3">
-              <Button type="button" variant="outline" className="w-full" disabled={locating} onClick={() => geoLocate("gps_koordinaten")}>
+              <Button type="button" variant="outline" className="w-full max-sm:h-11" disabled={locating} onClick={() => geoLocate("gps_koordinaten")}>
                 {locating ? <IconLoader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <IconCrosshair className="h-4 w-4 mr-1.5" />}
                 Aktuellen Standort verwenden
               </Button>
@@ -235,7 +235,7 @@ export default function PublicFormFotodokumentation() {
                   onChange={(lat, lng) => handleMapMove("gps_koordinaten", lat, lng)}
                 />
               )}
-              <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors" onClick={() => setShowCoords(v => !v)}>
+              <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 py-1 max-sm:py-2 transition-colors" onClick={() => setShowCoords(v => !v)}>
                 {showCoords ? 'Koordinaten verbergen' : 'Koordinaten anzeigen'}
                 <IconChevronDown className={`h-3 w-3 transition-transform ${showCoords ? "rotate-180" : ""}`} />
               </button>

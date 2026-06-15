@@ -341,7 +341,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
             role="radio"
             aria-checked={lookupKey(fields.status) === 'geplant'}
             onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'geplant' ? undefined : 'geplant') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.status) === 'geplant'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -354,7 +354,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
             role="radio"
             aria-checked={lookupKey(fields.status) === 'in_arbeit'}
             onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'in_arbeit' ? undefined : 'in_arbeit') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.status) === 'in_arbeit'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -367,7 +367,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
             role="radio"
             aria-checked={lookupKey(fields.status) === 'abgeschlossen'}
             onClick={() => setFields(f => ({ ...f, status: (lookupKey(f.status) === 'abgeschlossen' ? undefined : 'abgeschlossen') as any }))}
-            className={`inline-flex items-center rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex items-center justify-center min-h-9 max-sm:min-h-11 max-sm:px-4 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               lookupKey(fields.status) === 'abgeschlossen'
                 ? 'bg-foreground text-background border-foreground'
                 : 'bg-background text-foreground border-input hover:bg-accent'
@@ -450,7 +450,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
       <div key="standort" className="space-y-1.5">
         <Label htmlFor="standort">GPS-Standort</Label>
         <div className="space-y-3">
-          <Button type="button" variant="outline" className="w-full" disabled={locating} onClick={() => geoLocate("standort")}>
+          <Button type="button" variant="outline" className="w-full max-sm:h-11" disabled={locating} onClick={() => geoLocate("standort")}>
             {locating ? <IconLoader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <IconCrosshair className="h-4 w-4 mr-1.5" />}
             Aktuellen Standort verwenden
           </Button>
@@ -469,7 +469,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
               onChange={(lat, lng) => handleMapMove("standort", lat, lng)}
             />
           )}
-          <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors" onClick={() => setShowCoords(v => !v)}>
+          <button type="button" className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 py-1 max-sm:py-2 transition-colors" onClick={() => setShowCoords(v => !v)}>
             {showCoords ? 'Koordinaten verbergen' : 'Koordinaten anzeigen'}
             <IconChevronDown className={`h-3 w-3 transition-transform ${showCoords ? "rotate-180" : ""}`} />
           </button>
@@ -620,7 +620,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
               onClick={() => setAiOpen(o => !o)}
               aria-expanded={aiOpen}
               aria-controls="ai-fill-panel"
-              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all mr-7 shadow-sm ${
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 max-sm:py-2 max-sm:px-4 text-xs font-semibold transition-all mr-7 shadow-sm ${
                 aiOpen
                   ? 'bg-primary text-primary-foreground ring-2 ring-primary/30'
                   : 'bg-primary/10 text-primary border border-primary/30 hover:bg-primary/15 hover:border-primary/50'
@@ -802,7 +802,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col min-h-0 min-w-0 max-sm:[&_input]:h-11">
           <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-4 space-y-4 min-w-0">
             {(() => {
               const renderField = (k: string) => {
@@ -901,9 +901,10 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
             </div>
           )}
           <DialogFooter className="sticky bottom-0 border-t bg-background/95 backdrop-blur px-6 py-3 gap-2">
-            <Button type="button" variant="outline" onClick={onClose}>Abbrechen</Button>
+            <Button type="button" variant="outline" onClick={onClose} className="max-sm:h-12 max-sm:text-base">Abbrechen</Button>
             <Button
               type="submit"
+              className="max-sm:h-12 max-sm:text-base"
               disabled={saving || !isDirty}
             >
               {saving ? 'Speichern...' : defaultValues ? 'Speichern' : 'Erstellen'}
