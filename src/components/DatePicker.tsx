@@ -81,27 +81,36 @@ export function DatePicker({
     // Empty string falls back to the format hint so the input never looks
     // blank before the AI sub-agent has filled the placeholder marker.
     const ph = placeholder || (mode === 'datetime' ? 'tt.mm.jjjj, hh:mm' : 'tt.mm.jjjj');
+    // iOS Safari sizes a native <input type=date> to the intrinsic width of its
+    // ::-webkit-datetime-edit (~150px) and ignores width / max-width / min-width
+    // entirely — the BOX itself grows, so in a narrow grid column the field
+    // spills past the dialog (confirmed on a real device; `block` alone only
+    // fixes Chrome). The robust fix is structural: the wrapper owns the visible
+    // box (border, fill, height, rounded) AND `overflow-hidden`, sized to the
+    // column. The bare, border-less input lives inside; however wide iOS makes
+    // it, the wrapper clips it to the column. The value is left-aligned so it
+    // stays visible; our own calendar glyph gives the affordance the clipped
+    // native indicator would otherwise provide.
     return (
-      <input
-        id={id}
-        type={mode === 'datetime' ? 'datetime-local' : 'date'}
-        step={mode === 'datetime' ? 60 : undefined}
-        value={value ?? ''}
-        min={min}
-        max={max}
-        required={required}
-        placeholder={ph}
-        onChange={e => onChange(e.target.value || null)}
-        // display MUST stay block, never flex: a flex <input type=date> turns
-        // its ::-webkit-datetime-edit into a flex item sized to min-content
-        // (~150px), which overflows the box and visually spills past the field
-        // on iOS Safari even with w-full/max-w-full/min-w-0. As a block control
-        // the value clips to the content box and the field fits its column.
-        style={{ minWidth: 0 }}
-        className={`block h-9 w-full min-w-0 max-w-full rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
-          ${invalid ? 'border-destructive' : 'border-input'}`}
-        aria-invalid={invalid || undefined}
-      />
+      <div className={`relative flex h-9 w-full min-w-0 max-w-full items-center overflow-hidden rounded-md border bg-transparent dark:bg-input/30 shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px] ${invalid ? 'border-destructive' : 'border-input'}`}>
+        <input
+          id={id}
+          type={mode === 'datetime' ? 'datetime-local' : 'date'}
+          step={mode === 'datetime' ? 60 : undefined}
+          value={value ?? ''}
+          min={min}
+          max={max}
+          required={required}
+          placeholder={ph}
+          onChange={e => onChange(e.target.value || null)}
+          style={{ minWidth: 0 }}
+          className="block h-full w-full min-w-0 border-0 bg-transparent pl-3 pr-9 py-1 text-base md:text-sm outline-none"
+          aria-invalid={invalid || undefined}
+        />
+        {mode === 'datetime'
+          ? <IconClock size={16} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 shrink-0 text-muted-foreground" />
+          : <IconCalendar size={16} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 shrink-0 text-muted-foreground" />}
+      </div>
     );
   }
 
