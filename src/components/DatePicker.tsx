@@ -85,12 +85,15 @@ export function DatePicker({
     // ::-webkit-datetime-edit (~150px) and ignores width / max-width / min-width
     // entirely — the BOX itself grows, so in a narrow grid column the field
     // spills past the dialog (confirmed on a real device; `block` alone only
-    // fixes Chrome). The robust fix is structural: the wrapper owns the visible
-    // box (border, fill, height, rounded) AND `overflow-hidden`, sized to the
-    // column. The bare, border-less input lives inside; however wide iOS makes
-    // it, the wrapper clips it to the column. The value is left-aligned so it
-    // stays visible; our own calendar glyph gives the affordance the clipped
-    // native indicator would otherwise provide.
+    // fixes Chrome). Fix is structural: a plain <div> wrapper (divs DO honour
+    // width) owns the visible box (border, fill, height, rounded) AND clips with
+    // overflow-hidden, so however wide iOS makes the input, it can never exceed
+    // the column. The bare borderless input fills the wrapper. We also hide the
+    // browser's native date indicator/spin chrome and give NO icon of our own:
+    // at this column width (~130px) the value "15.06.2026" only fits at 16px if
+    // it owns the full field — any trailing icon would clip the last digits.
+    // Result: the date field reads as a plain value box, identical to the text
+    // inputs around it. Tapping still opens the native picker on touch devices.
     return (
       <div className={`relative flex h-9 w-full min-w-0 max-w-full items-center overflow-hidden rounded-md border bg-transparent dark:bg-input/30 shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px] ${invalid ? 'border-destructive' : 'border-input'}`}>
         <input
@@ -104,17 +107,9 @@ export function DatePicker({
           placeholder={ph}
           onChange={e => onChange(e.target.value || null)}
           style={{ minWidth: 0 }}
-          // Hide the browser's own date/time indicator + spin buttons so only our
-          // single calendar glyph shows (no double icon) and the value isn't
-          // pushed wide; left-align the value so it stays visible if the wrapper
-          // clips a too-wide native box. Tapping the field still opens the native
-          // picker on touch devices.
-          className="block h-full w-full min-w-0 border-0 bg-transparent pl-3 pr-9 py-1 text-base md:text-sm outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-date-and-time-value]:text-left"
+          className="block h-full w-full min-w-0 border-0 bg-transparent px-3 py-1 text-base md:text-sm outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-date-and-time-value]:text-left"
           aria-invalid={invalid || undefined}
         />
-        {mode === 'datetime'
-          ? <IconClock size={16} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 shrink-0 text-muted-foreground" />
-          : <IconCalendar size={16} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 shrink-0 text-muted-foreground" />}
       </div>
     );
   }
