@@ -107,7 +107,7 @@ export function DatePicker({
           placeholder={ph}
           onChange={e => onChange(e.target.value || null)}
           style={{ minWidth: 0 }}
-          className="block h-full w-full min-w-0 border-0 bg-transparent px-3 py-1 text-base md:text-sm outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-date-and-time-value]:text-left"
+          className="flex h-full w-full min-w-0 items-center border-0 bg-transparent px-3 py-1 text-base md:text-sm outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-date-and-time-value]:text-left"
           aria-invalid={invalid || undefined}
         />
       </div>
