@@ -531,10 +531,10 @@ function CardView({ card, dnd, geom, onCardClick, renderCard, narrow = false }: 
       type="button"
       onClick={(e) => { e.stopPropagation(); if (dnd.consumeClick()) return; onCardClick?.(card); }}
       {...cardDragProps(card, dnd, geom)}
-      className={`flex flex-col gap-0.5 rounded-md border-l-4 px-2 py-1.5 text-left min-w-0 ${TONE_ACCENT[card.tone ?? 'default']} ${dnd.draggingId === card.id ? 'opacity-40' : ''} hover:shadow-sm transition-shadow`}
+      className={`flex flex-col border-l-4 text-left min-w-0 ${narrow ? 'gap-1 rounded-xl px-3 py-3 min-h-[56px] justify-center' : 'gap-0.5 rounded-md px-2 py-1.5'} ${TONE_ACCENT[card.tone ?? 'default']} ${dnd.draggingId === card.id ? 'opacity-40' : ''} hover:shadow-sm transition-shadow`}
     >
-      <span className={`truncate font-semibold text-foreground ${narrow ? 'text-[13px]' : 'text-xs'}`}>{card.title}</span>
-      {card.subtitle != null && card.subtitle !== '' && <span className={`truncate text-muted-foreground ${narrow ? 'text-xs' : 'text-[11px]'}`}>{card.subtitle}</span>}
+      <span className={`truncate font-semibold text-foreground ${narrow ? 'text-[15px]' : 'text-xs'}`}>{card.title}</span>
+      {card.subtitle != null && card.subtitle !== '' && <span className={`truncate text-muted-foreground ${narrow ? 'text-[13px]' : 'text-[11px]'}`}>{card.subtitle}</span>}
     </button>
   );
 }
