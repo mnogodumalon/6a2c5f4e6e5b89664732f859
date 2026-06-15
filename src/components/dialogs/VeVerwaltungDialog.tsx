@@ -883,15 +883,8 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
               return orderedFields.map((item, idx) => {
                 if (typeof item === 'string') return renderField(item);
                 const cols = item.cols ?? `repeat(${item.row.length}, minmax(0, 1fr))`;
-                // Stack paired fields on phones (one column) and only apply the
-                // multi-column layout from sm: up. A side-by-side pair at ~130px
-                // is too narrow for a native <input type="date"> — iOS reserves an
-                // intrinsic width for its date edit/indicator and the content
-                // overflows into the neighbouring column. Full width on mobile
-                // gives every field room; the arbitrary class is a literal string
-                // so Tailwind's JIT picks it up.
                 return (
-                  <div key={`row-${idx}`} className="grid grid-cols-1 gap-3 sm:[grid-template-columns:var(--row-cols)]" style={{ '--row-cols': cols } as React.CSSProperties}>
+                  <div key={`row-${idx}`} className="grid gap-3" style={{ gridTemplateColumns: cols }}>
                     {item.row.map(renderField)}
                   </div>
                 );

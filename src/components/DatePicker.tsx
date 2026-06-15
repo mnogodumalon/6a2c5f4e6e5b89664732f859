@@ -92,12 +92,13 @@ export function DatePicker({
         required={required}
         placeholder={ph}
         onChange={e => onChange(e.target.value || null)}
-        // min-w-0 is critical: webkit reserves intrinsic width for date/time
-        // pseudo-elements (::-webkit-datetime-edit-*) that w-full alone cannot
-        // override. Without it the input pushes its container wider than the
-        // dialog and triggers horizontal scroll on mobile.
+        // display MUST stay block, never flex: a flex <input type=date> turns
+        // its ::-webkit-datetime-edit into a flex item sized to min-content
+        // (~150px), which overflows the box and visually spills past the field
+        // on iOS Safari even with w-full/max-w-full/min-w-0. As a block control
+        // the value clips to the content box and the field fits its column.
         style={{ minWidth: 0 }}
-        className={`flex h-9 w-full min-w-0 max-w-full rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
+        className={`block h-9 w-full min-w-0 max-w-full rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
           ${invalid ? 'border-destructive' : 'border-input'}`}
         aria-invalid={invalid || undefined}
       />
