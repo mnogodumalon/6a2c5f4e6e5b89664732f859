@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "ve_verwaltung",
+      "app_id": "6a2c5f128320e49fee0782df",
+      "path": "/rest/apps/6a2c5f128320e49fee0782df/records",
+      "allowed_fields": [
+        "ve_nummer",
+        "ausstellungsdatum",
+        "ablaufdatum",
+        "erinnerungsdatum",
+        "ve_status",
+        "behoerde",
+        "ansprechpartner_vorname",
+        "ansprechpartner_nachname",
+        "ansprechpartner_telefon",
+        "ve_notizen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "VE-Verwaltung — Formular"
+    },
+    {
+      "entity": "fotodokumentation",
+      "app_id": "6a2c5f156476392f056b1b6d",
+      "path": "/rest/apps/6a2c5f156476392f056b1b6d/records",
+      "allowed_fields": [
+        "fotokategorie",
+        "aufnahmedatum",
+        "gps_koordinaten",
+        "foto_beschreibung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Fotodokumentation — Formular"
+    },
+    {
+      "entity": "kommunikation",
+      "app_id": "6a2c5f1737b1758cae8c5e36",
+      "path": "/rest/apps/6a2c5f1737b1758cae8c5e36/records",
+      "allowed_fields": [
+        "kontakt_vorname",
+        "kontakt_nachname",
+        "kontakt_adresse_strasse",
+        "kontakt_adresse_hausnummer",
+        "kontakt_adresse_plz",
+        "kontakt_telefon",
+        "kontakt_email",
+        "gespraechsdatum",
+        "kontaktart",
+        "gespraechsnotiz",
+        "besonderheiten",
+        "kontakt_adresse_ort"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Kommunikation — Formular"
+    },
+    {
+      "entity": "tagesberichte",
+      "app_id": "6a2c5f1b22f933a50d29cc67",
+      "path": "/rest/apps/6a2c5f1b22f933a50d29cc67/records",
+      "allowed_fields": [
+        "berichtsdatum",
+        "verfasser_vorname",
+        "verfasser_nachname",
+        "wetterbedingungen",
+        "mitarbeiter_anzahl",
+        "durchgefuehrte_arbeiten",
+        "besonderheiten_tag",
+        "naechste_schritte",
+        "freigabe_vorgesetzter",
+        "freigabe_bemerkung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Tagesberichte — Formular"
+    },
+    {
+      "entity": "baustellen",
+      "app_id": "6a2c5f0c38e206d8f43b2a0b",
+      "path": "/rest/apps/6a2c5f0c38e206d8f43b2a0b/records",
+      "allowed_fields": [
+        "name",
+        "beschreibung",
+        "status",
+        "startdatum",
+        "enddatum",
+        "strasse",
+        "hausnummer",
+        "plz",
+        "ort",
+        "standort",
+        "zustaendige_person",
+        "auftraggeber",
+        "notizen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Baustellen — Formular"
+    },
+    {
+      "entity": "vor_ort_checkliste",
+      "app_id": "6a2c5f14742c88e340e1e58a",
+      "path": "/rest/apps/6a2c5f14742c88e340e1e58a/records",
+      "allowed_fields": [
+        "pruefzeitpunkt",
+        "pruefer",
+        "absperrungen_korrekt",
+        "parkverbote_eingerichtet",
+        "anwohner_informiert",
+        "grabengroesse_korrekt",
+        "bemerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Vor-Ort-Checkliste — Formular"
+    },
+    {
+      "entity": "leitungsauskunft",
+      "app_id": "6a2c5f169a7902a433caa841",
+      "path": "/rest/apps/6a2c5f169a7902a433caa841/records",
+      "allowed_fields": [
+        "hausanschluss_info",
+        "hausanschluss_typ",
+        "spannungsebene",
+        "muffentyp",
+        "material",
+        "leitungsfuehrung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Leitungsauskunft — Formular"
+    },
+    {
+      "entity": "maengelerfassung",
+      "app_id": "6a2c5f19fe95c4a9b239f807",
+      "path": "/rest/apps/6a2c5f19fe95c4a9b239f807/records",
+      "allowed_fields": [
+        "mangeltyp",
+        "mangel_beschreibung",
+        "prioritaet",
+        "meldedatum",
+        "mangel_status",
+        "firma_name",
+        "firma_ansprechpartner_vorname",
+        "firma_ansprechpartner_nachname",
+        "firma_telefon",
+        "mangel_bemerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Mängelerfassung — Formular"
+    }
+  ]
+}
