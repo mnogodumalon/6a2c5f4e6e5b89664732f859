@@ -97,8 +97,7 @@ export function DatePicker({
         // override. Without it the input pushes its container wider than the
         // dialog and triggers horizontal scroll on mobile.
         style={{ minWidth: 0 }}
-        className={`flex h-10 w-full min-w-0 max-w-full rounded-md border bg-background px-3 py-2 text-sm
-          ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+        className={`flex h-9 w-full min-w-0 max-w-full rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
           ${invalid ? 'border-destructive' : 'border-input'}`}
         aria-invalid={invalid || undefined}
       />
@@ -152,8 +151,7 @@ export function DatePicker({
           type="button"
           aria-invalid={invalid || undefined}
           style={{ minWidth: 0 }}
-          className={`flex h-10 w-full min-w-0 max-w-full items-center gap-2 rounded-md border bg-background px-3 py-2 text-sm
-            ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+          className={`flex h-9 w-full min-w-0 max-w-full items-center gap-2 rounded-md border bg-transparent dark:bg-input/30 px-3 py-1 text-base md:text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]
             ${invalid ? 'border-destructive' : 'border-input'}`}
         >
           {mode === 'datetime'
