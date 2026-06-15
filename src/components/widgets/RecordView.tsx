@@ -699,7 +699,7 @@ export function RecordOverlay({
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex h-9 w-9 max-sm:h-11 max-sm:w-11 items-center justify-center rounded-lg text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+            className="inline-flex h-9 w-9 max-sm:h-11 max-sm:w-11 items-center justify-center rounded-lg max-sm:rounded-full text-muted-foreground hover:bg-accent hover:text-foreground transition-colors max-sm:border max-sm:border-border max-sm:bg-card max-sm:shadow-sm"
             aria-label={backLabel}
           >
             <IconArrowLeft size={18} />
@@ -708,7 +708,7 @@ export function RecordOverlay({
         <button
           type="button"
           onClick={requestClose}
-          className="inline-flex h-9 w-9 max-sm:h-11 max-sm:w-11 items-center justify-center rounded-lg text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+          className="inline-flex h-9 w-9 max-sm:h-11 max-sm:w-11 items-center justify-center rounded-lg max-sm:rounded-full text-muted-foreground hover:bg-accent hover:text-foreground transition-colors max-sm:border max-sm:border-border max-sm:bg-card max-sm:shadow-sm"
           aria-label={closeLabel}
         >
           <IconX size={18} />

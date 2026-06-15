@@ -452,7 +452,7 @@ export function KanbanWidget(props: KanbanWidgetProps) {
                     if (isFallback) return;   // not a drop target
                     if (el) colRefs.current.set(col.key, el); else colRefs.current.delete(col.key);
                   }}
-                  className={`flex min-h-[200px] snap-start flex-col ${narrow ? 'overflow-hidden rounded-2xl border border-border bg-card shadow-sm' : 'border-l border-border first:border-l-0'} ${isTarget ? 'ring-2 ring-inset ring-primary/60' : ''} ${columnClassName?.(col) ?? ''}`}
+                  className={`flex min-h-[200px] max-sm:min-h-[7rem] snap-start flex-col ${narrow ? 'overflow-hidden rounded-2xl border border-border bg-card shadow-sm' : 'border-l border-border first:border-l-0'} ${isTarget ? 'ring-2 ring-inset ring-primary/60' : ''} ${columnClassName?.(col) ?? ''}`}
                 >
                   {/* Column header: collapse toggle + (tone dot + label + count
                       badge). The toggle belongs to the WIDGET and stays even
@@ -464,9 +464,9 @@ export function KanbanWidget(props: KanbanWidgetProps) {
                       onClick={() => { if (dnd.consumeClick()) return; toggleCollapsed(col.key); }}
                       aria-expanded={true}
                       aria-label={`Spalte ${columnAriaLabel(col)} einklappen`}
-                      className="shrink-0 rounded p-0.5 text-muted-foreground transition-colors hover:bg-card hover:text-foreground"
+                      className="shrink-0 rounded p-0.5 max-sm:p-2 text-muted-foreground transition-colors hover:bg-card hover:text-foreground"
                     >
-                      <IconChevronsLeft className="h-3.5 w-3.5" />
+                      <IconChevronsLeft className="h-3.5 w-3.5 max-sm:h-5 max-sm:w-5" />
                     </button>
                     <div className="min-w-0 flex-1">
                       {renderColumnHeader && !isFallback ? renderColumnHeader(col) : (
@@ -495,9 +495,9 @@ export function KanbanWidget(props: KanbanWidgetProps) {
                         type="button"
                         onClick={() => { if (dnd.consumeClick()) return; onAddCard(col.key); }}
                         aria-label={`Neue Karte — ${columnAriaLabel(col)}`}
-                        className="mt-auto flex items-center justify-center gap-1 rounded-md border border-dashed border-border py-1.5 text-[11px] font-medium text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
+                        className="mt-auto flex items-center justify-center gap-1 rounded-md border border-dashed border-border py-1.5 max-sm:py-3 max-sm:min-h-11 text-[11px] max-sm:text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
                       >
-                        <IconPlus className="h-3.5 w-3.5" />Karte
+                        <IconPlus className="h-3.5 w-3.5 max-sm:h-4 max-sm:w-4" />Karte
                       </button>
                     )}
                   </div>
