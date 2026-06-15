@@ -305,7 +305,7 @@ export function VorOrtChecklisteDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -324,7 +324,7 @@ export function VorOrtChecklisteDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="pruefzeitpunkt">Datum und Uhrzeit der Prüfung</Label>
         <DatePicker
           id="pruefzeitpunkt"
-          placeholder="Wann geprüft?"
+          placeholder=""
           mode="datetime"
           value={fields.pruefzeitpunkt ?? null}
           onChange={v => setFields(f => ({ ...f, pruefzeitpunkt: v ?? undefined }))}
@@ -336,7 +336,7 @@ export function VorOrtChecklisteDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="pruefer">Prüfer</Label>
         <Input
           id="pruefer"
-          placeholder="Name des Prüfers"
+          placeholder=""
           value={fields.pruefer ?? ''}
           onChange={e => setFields(f => ({ ...f, pruefer: e.target.value }))}
         />
@@ -399,7 +399,7 @@ export function VorOrtChecklisteDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="bemerkungen">Bemerkungen und Abweichungen</Label>
         <Textarea
           id="bemerkungen"
-          placeholder="Mängel, Abweichungen, Maßnahmen..."
+          placeholder=""
           value={fields.bemerkungen ?? ''}
           onChange={e => setFields(f => ({ ...f, bemerkungen: e.target.value }))}
           rows={3}

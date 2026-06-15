@@ -314,7 +314,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="name">Baustellenname</Label>
         <Input
           id="name"
-          placeholder="z. B. Neubau Bürogebäude"
+          placeholder=""
           value={fields.name ?? ''}
           onChange={e => setFields(f => ({ ...f, name: e.target.value }))}
         />
@@ -325,7 +325,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="beschreibung">Beschreibung</Label>
         <Textarea
           id="beschreibung"
-          placeholder="Art der Arbeiten, Umfang, besondere Anforderungen..."
+          placeholder=""
           value={fields.beschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, beschreibung: e.target.value }))}
           rows={3}
@@ -383,7 +383,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="startdatum">Startdatum</Label>
         <DatePicker
           id="startdatum"
-          placeholder="Wann beginnt es?"
+          placeholder=""
           mode="date"
           value={fields.startdatum ?? null}
           onChange={v => setFields(f => ({ ...f, startdatum: v ?? undefined }))}
@@ -395,7 +395,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="enddatum">Geplantes Enddatum</Label>
         <DatePicker
           id="enddatum"
-          placeholder="Wann wird es fertig?"
+          placeholder=""
           mode="date"
           value={fields.enddatum ?? null}
           onChange={v => setFields(f => ({ ...f, enddatum: v ?? undefined }))}
@@ -407,7 +407,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="strasse">Straße</Label>
         <Input
           id="strasse"
-          placeholder="z. B. Hauptstr."
+          placeholder=""
           value={fields.strasse ?? ''}
           onChange={e => setFields(f => ({ ...f, strasse: e.target.value }))}
         />
@@ -418,7 +418,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="hausnummer">Hausnummer</Label>
         <Input
           id="hausnummer"
-          placeholder="z. B. 42"
+          placeholder=""
           value={fields.hausnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, hausnummer: e.target.value }))}
         />
@@ -429,7 +429,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="plz">Postleitzahl</Label>
         <Input
           id="plz"
-          placeholder="z. B. 10115"
+          placeholder=""
           value={fields.plz ?? ''}
           onChange={e => setFields(f => ({ ...f, plz: e.target.value }))}
         />
@@ -440,7 +440,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="ort">Ort</Label>
         <Input
           id="ort"
-          placeholder="z. B. Berlin"
+          placeholder=""
           value={fields.ort ?? ''}
           onChange={e => setFields(f => ({ ...f, ort: e.target.value }))}
         />
@@ -505,7 +505,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="zustaendige_person">Zuständige Person</Label>
         <Input
           id="zustaendige_person"
-          placeholder="Name der Bauleitung"
+          placeholder=""
           value={fields.zustaendige_person ?? ''}
           onChange={e => setFields(f => ({ ...f, zustaendige_person: e.target.value }))}
         />
@@ -516,7 +516,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="auftraggeber">Auftraggeber</Label>
         <Input
           id="auftraggeber"
-          placeholder="z. B. Musterfirma GmbH"
+          placeholder=""
           value={fields.auftraggeber ?? ''}
           onChange={e => setFields(f => ({ ...f, auftraggeber: e.target.value }))}
         />
@@ -527,7 +527,7 @@ export function BaustellenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="notizen">Notizen</Label>
         <Textarea
           id="notizen"
-          placeholder="Besonderheiten, Kontakte, Genehmigungen..."
+          placeholder=""
           value={fields.notizen ?? ''}
           onChange={e => setFields(f => ({ ...f, notizen: e.target.value }))}
           rows={3}

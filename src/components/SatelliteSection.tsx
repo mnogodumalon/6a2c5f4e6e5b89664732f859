@@ -61,7 +61,7 @@ interface SatelliteSectionProps<T> {
 export function SatelliteSection<T,>({ title, items, map, onOpen, onAdd, addLabel, icon, getKey, emptyText }: SatelliteSectionProps<T>) {
   return (
     <RecordSection title={`${title} (${items.length})`} icon={icon}>
-      <div className="space-y-1">
+      <div className="flex flex-col gap-2">
         {items.map((item, i) => {
           const row = map(item);
           return (
@@ -76,14 +76,16 @@ export function SatelliteSection<T,>({ title, items, map, onOpen, onAdd, addLabe
           );
         })}
         {items.length === 0 && (
-          <p className="text-sm text-muted-foreground">{emptyText ?? `Noch keine ${title}.`}</p>
+          <p className="rounded-2xl border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
+            {emptyText ?? `Noch keine ${title}.`}
+          </p>
         )}
         <button
           type="button"
           onClick={onAdd}
-          className="flex w-full items-center gap-2 rounded-xl border border-dashed border-border px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-primary hover:bg-primary/5 hover:text-primary"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl border border-dashed border-border py-3 text-sm font-medium text-muted-foreground transition-colors hover:border-primary hover:bg-primary/5 hover:text-primary"
         >
-          <IconPlus className="h-4 w-4" />{addLabel ?? `${title} hinzufügen`}
+          <IconPlus size={18} stroke={1.75} />{addLabel ?? `${title} hinzufügen`}
         </button>
       </div>
     </RecordSection>

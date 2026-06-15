@@ -463,7 +463,7 @@ export function RecordRelation({ label, name, meta, icon: Icon, href, onClick, c
     return <a href={href} className={`block rounded-2xl border border-border bg-card p-4 hover:bg-muted/50 transition-colors${extra}`}>{Inner}</a>;
   }
   if (onClick) {
-    return <button type="button" onClick={onClick} className={`text-left rounded-2xl border border-border bg-card p-4 hover:bg-muted/50 transition-colors${extra}`}>{Inner}</button>;
+    return <button type="button" onClick={onClick} className={`block w-full text-left rounded-2xl border border-border bg-card p-4 hover:bg-muted/50 transition-colors${extra}`}>{Inner}</button>;
   }
   return <div className={`rounded-2xl border border-border bg-card p-4 ${isClickable ? 'cursor-pointer' : ''}${extra}`}>{Inner}</div>;
 }

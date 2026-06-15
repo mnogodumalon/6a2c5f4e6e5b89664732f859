@@ -327,7 +327,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -346,7 +346,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="hausanschluss_info">Hausanschluss-Informationen</Label>
         <Textarea
           id="hausanschluss_info"
-          placeholder="Technische Details, Anschlussort, Anschlussart..."
+          placeholder=""
           value={fields.hausanschluss_info ?? ''}
           onChange={e => setFields(f => ({ ...f, hausanschluss_info: e.target.value }))}
           rows={3}
@@ -476,7 +476,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="muffentyp">Muffentyp</Label>
         <Input
           id="muffentyp"
-          placeholder="z. B. Kunststoff, Beton"
+          placeholder=""
           value={fields.muffentyp ?? ''}
           onChange={e => setFields(f => ({ ...f, muffentyp: e.target.value }))}
         />
@@ -487,7 +487,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="material">Material</Label>
         <Input
           id="material"
-          placeholder="z. B. Kunststoff, Kupfer"
+          placeholder=""
           value={fields.material ?? ''}
           onChange={e => setFields(f => ({ ...f, material: e.target.value }))}
         />
@@ -498,7 +498,7 @@ export function LeitungsauskunftDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="leitungsfuehrung">Leitungsführung und Notizen</Label>
         <Textarea
           id="leitungsfuehrung"
-          placeholder="Verlauf, Tiefe, Besonderheiten..."
+          placeholder=""
           value={fields.leitungsfuehrung ?? ''}
           onChange={e => setFields(f => ({ ...f, leitungsfuehrung: e.target.value }))}
           rows={3}

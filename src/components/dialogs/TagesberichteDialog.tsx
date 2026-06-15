@@ -320,7 +320,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -339,7 +339,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="berichtsdatum">Berichtsdatum</Label>
         <DatePicker
           id="berichtsdatum"
-          placeholder="Für welchen Tag?"
+          placeholder=""
           mode="date"
           value={fields.berichtsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, berichtsdatum: v ?? undefined }))}
@@ -351,7 +351,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="verfasser_vorname">Vorname Verfasser</Label>
         <Input
           id="verfasser_vorname"
-          placeholder="Vorname"
+          placeholder=""
           value={fields.verfasser_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, verfasser_vorname: e.target.value }))}
         />
@@ -362,7 +362,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="verfasser_nachname">Nachname Verfasser</Label>
         <Input
           id="verfasser_nachname"
-          placeholder="Nachname"
+          placeholder=""
           value={fields.verfasser_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, verfasser_nachname: e.target.value }))}
         />
@@ -375,7 +375,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
           value={lookupKey(fields.wetterbedingungen) ?? ''}
           onValueChange={v => setFields(f => ({ ...f, wetterbedingungen: v === 'none' ? undefined : v as any }))}
         >
-          <SelectTrigger id="wetterbedingungen"><SelectValue placeholder="Wie ist das Wetter?" /></SelectTrigger>
+          <SelectTrigger id="wetterbedingungen"><SelectValue placeholder="" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="none">—</SelectItem>
             <SelectItem value="sonnig">Sonnig</SelectItem>
@@ -396,7 +396,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'mitarbeiter_anzahl')}
-          placeholder="Wie viele?"
+          placeholder=""
           value={fields.mitarbeiter_anzahl !== undefined ? fields.mitarbeiter_anzahl : (computedValues['mitarbeiter_anzahl'] ?? '')}
           onChange={e => setFields(f => ({ ...f, mitarbeiter_anzahl: clampNumberValue(formEnhancements, 'mitarbeiter_anzahl', e.target.value) }))}
         />
@@ -407,7 +407,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="durchgefuehrte_arbeiten">Durchgeführte Arbeiten</Label>
         <Textarea
           id="durchgefuehrte_arbeiten"
-          placeholder="Welche Arbeiten erledigt, Fortschritt, Leistung..."
+          placeholder=""
           value={fields.durchgefuehrte_arbeiten ?? ''}
           onChange={e => setFields(f => ({ ...f, durchgefuehrte_arbeiten: e.target.value }))}
           rows={3}
@@ -419,7 +419,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="besonderheiten_tag">Besonderheiten des Tages</Label>
         <Textarea
           id="besonderheiten_tag"
-          placeholder="Besondere Ereignisse, Probleme, Verzögerungen..."
+          placeholder=""
           value={fields.besonderheiten_tag ?? ''}
           onChange={e => setFields(f => ({ ...f, besonderheiten_tag: e.target.value }))}
           rows={3}
@@ -431,7 +431,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="naechste_schritte">Nächste geplante Schritte</Label>
         <Textarea
           id="naechste_schritte"
-          placeholder="Geplante Arbeiten, Folgetätigkeiten..."
+          placeholder=""
           value={fields.naechste_schritte ?? ''}
           onChange={e => setFields(f => ({ ...f, naechste_schritte: e.target.value }))}
           rows={3}
@@ -456,7 +456,7 @@ export function TagesberichteDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="freigabe_bemerkung">Bemerkung zur Freigabe</Label>
         <Textarea
           id="freigabe_bemerkung"
-          placeholder="Anmerkungen zur Freigabe..."
+          placeholder=""
           value={fields.freigabe_bemerkung ?? ''}
           onChange={e => setFields(f => ({ ...f, freigabe_bemerkung: e.target.value }))}
           rows={3}

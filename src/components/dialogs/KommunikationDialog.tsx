@@ -316,7 +316,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -335,7 +335,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_vorname">Vorname Kontaktperson</Label>
         <Input
           id="kontakt_vorname"
-          placeholder="Vorname"
+          placeholder=""
           value={fields.kontakt_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_vorname: e.target.value }))}
         />
@@ -346,7 +346,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_nachname">Nachname Kontaktperson</Label>
         <Input
           id="kontakt_nachname"
-          placeholder="Nachname"
+          placeholder=""
           value={fields.kontakt_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_nachname: e.target.value }))}
         />
@@ -357,7 +357,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_adresse_strasse">Straße</Label>
         <Input
           id="kontakt_adresse_strasse"
-          placeholder="z. B. Hauptstr."
+          placeholder=""
           value={fields.kontakt_adresse_strasse ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_adresse_strasse: e.target.value }))}
         />
@@ -368,7 +368,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_adresse_hausnummer">Hausnummer</Label>
         <Input
           id="kontakt_adresse_hausnummer"
-          placeholder="z. B. 42"
+          placeholder=""
           value={fields.kontakt_adresse_hausnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_adresse_hausnummer: e.target.value }))}
         />
@@ -379,7 +379,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_adresse_plz">Postleitzahl</Label>
         <Input
           id="kontakt_adresse_plz"
-          placeholder="z. B. 10115"
+          placeholder=""
           value={fields.kontakt_adresse_plz ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_adresse_plz: e.target.value }))}
         />
@@ -401,7 +401,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Input
           id="kontakt_email"
           type="email"
-          placeholder="z. B. info@beispiel.de"
+          placeholder=""
           value={fields.kontakt_email ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_email: e.target.value }))}
         />
@@ -412,7 +412,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="gespraechsdatum">Datum des Gesprächs</Label>
         <DatePicker
           id="gespraechsdatum"
-          placeholder="Wann gesprochen?"
+          placeholder=""
           mode="datetime"
           value={fields.gespraechsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, gespraechsdatum: v ?? undefined }))}
@@ -483,7 +483,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="gespraechsnotiz">Gesprächsnotiz</Label>
         <Textarea
           id="gespraechsnotiz"
-          placeholder="Was wurde besprochen, Vereinbarungen, Ergebnisse..."
+          placeholder=""
           value={fields.gespraechsnotiz ?? ''}
           onChange={e => setFields(f => ({ ...f, gespraechsnotiz: e.target.value }))}
           rows={3}
@@ -495,7 +495,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="besonderheiten">Besonderheiten</Label>
         <Textarea
           id="besonderheiten"
-          placeholder="Besondere Reaktionen, Anforderungen..."
+          placeholder=""
           value={fields.besonderheiten ?? ''}
           onChange={e => setFields(f => ({ ...f, besonderheiten: e.target.value }))}
           rows={3}
@@ -507,7 +507,7 @@ export function KommunikationDialog({ open, onClose, onSubmit, defaultValues, re
         <Label htmlFor="kontakt_adresse_ort">Ort</Label>
         <Input
           id="kontakt_adresse_ort"
-          placeholder="z. B. Berlin"
+          placeholder=""
           value={fields.kontakt_adresse_ort ?? ''}
           onChange={e => setFields(f => ({ ...f, kontakt_adresse_ort: e.target.value }))}
         />

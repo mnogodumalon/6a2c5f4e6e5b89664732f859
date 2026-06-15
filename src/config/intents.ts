@@ -14,8 +14,9 @@
  *   // </custom:intent-imports>
  *   …
  *   // <custom:intents>
- *   { path: '/intents/neue-buchung', label: 'Neue Buchung', icon: IconCalendarPlus, description: 'Buchung in 3 Schritten anlegen' },
- *   // </custom:intents>
+  { path: '/intents/tagesbericht-erstellen', label: 'Tagesbericht', icon: IconClipboardCheck, description: 'Checkliste + Tagesbericht für eine Baustelle erstellen' },
+  { path: '/intents/mangel-melden', label: 'Mangel melden', icon: IconAlertTriangle, description: 'Mangel erfassen und Kommunikation dokumentieren' },
+  // </custom:intents>
  */
 import type { ComponentType } from 'react';
 

@@ -330,7 +330,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -421,7 +421,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="mangel_beschreibung">Beschreibung des Mangels</Label>
         <Textarea
           id="mangel_beschreibung"
-          placeholder="Wo, wie erkannt, welche Auswirkung..."
+          placeholder=""
           value={fields.mangel_beschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, mangel_beschreibung: e.target.value }))}
           rows={3}
@@ -492,7 +492,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="meldedatum">Meldedatum</Label>
         <DatePicker
           id="meldedatum"
-          placeholder="Wann festgestellt?"
+          placeholder=""
           mode="datetime"
           value={fields.meldedatum ?? null}
           onChange={v => setFields(f => ({ ...f, meldedatum: v ?? undefined }))}
@@ -550,7 +550,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="firma_name">Verantwortliche Firma</Label>
         <Input
           id="firma_name"
-          placeholder="z. B. Elektro Müller GmbH"
+          placeholder=""
           value={fields.firma_name ?? ''}
           onChange={e => setFields(f => ({ ...f, firma_name: e.target.value }))}
         />
@@ -561,7 +561,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="firma_ansprechpartner_vorname">Vorname Ansprechpartner Firma</Label>
         <Input
           id="firma_ansprechpartner_vorname"
-          placeholder="Vorname"
+          placeholder=""
           value={fields.firma_ansprechpartner_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, firma_ansprechpartner_vorname: e.target.value }))}
         />
@@ -572,7 +572,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="firma_ansprechpartner_nachname">Nachname Ansprechpartner Firma</Label>
         <Input
           id="firma_ansprechpartner_nachname"
-          placeholder="Nachname"
+          placeholder=""
           value={fields.firma_ansprechpartner_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, firma_ansprechpartner_nachname: e.target.value }))}
         />
@@ -663,7 +663,7 @@ export function MaengelerfassungDialog({ open, onClose, onSubmit, defaultValues,
         <Label htmlFor="mangel_bemerkungen">Weitere Bemerkungen</Label>
         <Textarea
           id="mangel_bemerkungen"
-          placeholder="Frist, Abstimmungen, Fotos..."
+          placeholder=""
           value={fields.mangel_bemerkungen ?? ''}
           onChange={e => setFields(f => ({ ...f, mangel_bemerkungen: e.target.value }))}
           rows={3}

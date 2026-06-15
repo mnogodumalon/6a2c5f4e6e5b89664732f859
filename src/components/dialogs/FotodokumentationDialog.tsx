@@ -361,7 +361,7 @@ export function FotodokumentationDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -426,7 +426,7 @@ export function FotodokumentationDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="aufnahmedatum">Aufnahmedatum und -uhrzeit</Label>
         <DatePicker
           id="aufnahmedatum"
-          placeholder="Wann aufgenommen?"
+          placeholder=""
           mode="datetime"
           value={fields.aufnahmedatum ?? null}
           onChange={v => setFields(f => ({ ...f, aufnahmedatum: v ?? undefined }))}
@@ -562,7 +562,7 @@ export function FotodokumentationDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="foto_beschreibung">Beschreibung</Label>
         <Textarea
           id="foto_beschreibung"
-          placeholder="Was zeigt das Foto, Ort, Besonderheiten..."
+          placeholder=""
           value={fields.foto_beschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, foto_beschreibung: e.target.value }))}
           rows={3}

@@ -326,7 +326,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="baustelle">Baustelle</Label>
         <Combobox
           id="baustelle"
-          placeholder="Welche Baustelle?"
+          placeholder=""
           items={baustellenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.name ?? r.record_id),
@@ -345,7 +345,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ve_nummer">VE-Nummer</Label>
         <Input
           id="ve_nummer"
-          placeholder="z. B. VE-2026-001"
+          placeholder=""
           value={fields.ve_nummer ?? ''}
           onChange={e => setFields(f => ({ ...f, ve_nummer: e.target.value }))}
         />
@@ -356,7 +356,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ausstellungsdatum">Ausstellungsdatum</Label>
         <DatePicker
           id="ausstellungsdatum"
-          placeholder="Wann ausgestellt?"
+          placeholder=""
           mode="date"
           value={fields.ausstellungsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, ausstellungsdatum: v ?? undefined }))}
@@ -368,7 +368,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ablaufdatum">Ablaufdatum</Label>
         <DatePicker
           id="ablaufdatum"
-          placeholder="Wann läuft ab?"
+          placeholder=""
           mode="date"
           value={fields.ablaufdatum ?? null}
           onChange={v => setFields(f => ({ ...f, ablaufdatum: v ?? undefined }))}
@@ -380,7 +380,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="erinnerungsdatum">Erinnerungsdatum</Label>
         <DatePicker
           id="erinnerungsdatum"
-          placeholder="Erinnerung vor Ablauf"
+          placeholder=""
           mode="date"
           value={fields.erinnerungsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, erinnerungsdatum: v ?? undefined }))}
@@ -451,7 +451,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="behoerde">Zuständige Behörde</Label>
         <Input
           id="behoerde"
-          placeholder="z. B. Bauamt XYZ"
+          placeholder=""
           value={fields.behoerde ?? ''}
           onChange={e => setFields(f => ({ ...f, behoerde: e.target.value }))}
         />
@@ -462,7 +462,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ansprechpartner_vorname">Vorname Ansprechpartner</Label>
         <Input
           id="ansprechpartner_vorname"
-          placeholder="Vorname"
+          placeholder=""
           value={fields.ansprechpartner_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, ansprechpartner_vorname: e.target.value }))}
         />
@@ -473,7 +473,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ansprechpartner_nachname">Nachname Ansprechpartner</Label>
         <Input
           id="ansprechpartner_nachname"
-          placeholder="Nachname"
+          placeholder=""
           value={fields.ansprechpartner_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, ansprechpartner_nachname: e.target.value }))}
         />
@@ -564,7 +564,7 @@ export function VeVerwaltungDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="ve_notizen">Notizen</Label>
         <Textarea
           id="ve_notizen"
-          placeholder="Besonderheiten, Gültigkeitsbedingungen..."
+          placeholder=""
           value={fields.ve_notizen ?? ''}
           onChange={e => setFields(f => ({ ...f, ve_notizen: e.target.value }))}
           rows={3}
