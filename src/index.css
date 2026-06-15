@@ -73,6 +73,19 @@
     background-position: bottom;
     background-repeat: no-repeat;
   }
+  /* Mobile touch targets: every shadcn <Button> renders with
+     data-slot="button". On phones, floor its height at 44px (Apple HIG)
+     regardless of the size variant the consumer/agent chose (h-8/h-9/h-10),
+     so agent-composed desktop buttons become thumb-friendly on mobile with
+     zero extra agent work. Desktop keeps the compact size. `min-height`
+     only raises the floor — it never fights the height utility. Raw inline
+     buttons (worklist chips, seg-pills) carry no data-slot and are sized
+     explicitly in their own components. */
+  @media (max-width: 639px) {
+    [data-slot="button"] {
+      min-height: 2.75rem;
+    }
+  }
 }
 
 :root {

@@ -122,7 +122,7 @@ export function TopBar() {
       <div ref={appsRef} className="relative">
         <button
           onClick={() => { setAppsOpen(!appsOpen); setProfileOpen(false); }}
-          className="flex flex-col items-center gap-1 cursor-pointer"
+          className="flex flex-col items-center gap-1 cursor-pointer max-sm:p-1"
         >
           <div className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-white shadow-[0px_0px_4px_rgba(155,155,155,0.5)]">
             <AppsIcon size={20} className="text-foreground" />
@@ -256,7 +256,7 @@ export function TopBar() {
       <div ref={profileRef} className="relative">
         <button
           onClick={() => { setProfileOpen(!profileOpen); setAppsOpen(false); }}
-          className="flex flex-col items-center gap-1 cursor-pointer"
+          className="flex flex-col items-center gap-1 cursor-pointer max-sm:p-1"
         >
           {profile?.image ? (
             <img src={profile.image} alt="" className="w-[35px] h-[35px] rounded-full object-cover" />
