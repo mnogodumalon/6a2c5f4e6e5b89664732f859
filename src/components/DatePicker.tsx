@@ -104,7 +104,12 @@ export function DatePicker({
           placeholder={ph}
           onChange={e => onChange(e.target.value || null)}
           style={{ minWidth: 0 }}
-          className="block h-full w-full min-w-0 border-0 bg-transparent pl-3 pr-9 py-1 text-base md:text-sm outline-none"
+          // Hide the browser's own date/time indicator + spin buttons so only our
+          // single calendar glyph shows (no double icon) and the value isn't
+          // pushed wide; left-align the value so it stays visible if the wrapper
+          // clips a too-wide native box. Tapping the field still opens the native
+          // picker on touch devices.
+          className="block h-full w-full min-w-0 border-0 bg-transparent pl-3 pr-9 py-1 text-base md:text-sm outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-date-and-time-value]:text-left"
           aria-invalid={invalid || undefined}
         />
         {mode === 'datetime'
