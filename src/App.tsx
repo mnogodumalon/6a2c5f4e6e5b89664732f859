@@ -34,6 +34,8 @@ import PublicFormMaengelerfassung from '@/pages/public/PublicForm_Maengelerfassu
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const TagesberichtErstellenPage = lazy(() => import('@/pages/intents/TagesberichtErstellenPage'));
+const MangelMeldenPage = lazy(() => import('@/pages/intents/MangelMeldenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -73,6 +75,8 @@ export default function App() {
                 <Route path="maengelerfassung/:id" element={<MaengelerfassungDetailPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/tagesbericht-erstellen" element={<Suspense fallback={null}><TagesberichtErstellenPage /></Suspense>} />
+                <Route path="intents/mangel-melden" element={<Suspense fallback={null}><MangelMeldenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
